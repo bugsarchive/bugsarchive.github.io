@@ -11,6 +11,7 @@ for dir in ./*/
 do
 	dir=${dir%*/}
 	category="${dir##*/}"
+	echo "${dir##*/}"
 
 	echo "<h3>$category</h3><ul class='grid grid-cols-1 text-wrap sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-x-12'>" >> ../proc/posts.html
 
@@ -21,6 +22,7 @@ do
 	for filepath in ./*md
 	do
 		file="${filepath%*.md}"
+		echo $file
 		echo "$PWD Running md2html $PWD/${filepath##*/}"
 		cat "$start/src/posttop.html" > "$start/build/$category/${file##*/}.html"
 		$start/node_modules/.bin/md2html "$PWD/${filepath##*/}" >> "$start/build/$category/${file##*/}.html"
