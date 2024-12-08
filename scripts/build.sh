@@ -2,6 +2,7 @@
 
 start=$PWD
 cd md
+git pull
 
 [ ! -d ../proc ] && mkdir ../proc
 [ ! -d ../build ] && mkdir ../build
