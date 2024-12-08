@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "tailwindcss build -i ./src/tailwind.css -o ./build/tailwind.css",
-    "build": "yarn dev && bash ./scripts/build.sh",
+    "build": "yarn dev && bash ./scripts/build.sh"
   },
   "repository": "https://github.com/bugsarchive/site.git",
   "author": "Vithushan <sutharshanvithushan@gmail.com>",
