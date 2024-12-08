@@ -25,6 +25,7 @@ do
 		echo $file
 		echo "$PWD Running md2html $PWD/${filepath##*/}"
 		cat "$start/src/posttop.html" > "$start/build/$category/${file##*/}.html"
+		sed -i "s/Bugs Archive/${file##*/}/" "$start/build/$category/${file##*/}.html"
 		$start/node_modules/.bin/md2html "$PWD/${filepath##*/}" >> "$start/build/$category/${file##*/}.html"
 		cat "$start/src/postbtm.html" >> "$start/build/$category/${file##*/}.html"
 		echo "<li><a href='$category/${file##*/}.html'>${file##*/}</a></li>" >> ../../proc/posts.html
