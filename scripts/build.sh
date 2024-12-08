@@ -7,7 +7,7 @@ git pull
 [ ! -d ../proc ] && mkdir ../proc
 [ ! -d ../build ] && mkdir ../build
 
-for dir in ./*/
+for dir in */
 do
 	dir=${dir%*/}
 	category="${dir##*/}"
@@ -19,7 +19,7 @@ do
 
 	cd "${dir##*/}"
 
-	for filepath in ./*md
+	for filepath in *md
 	do
 		file="${filepath%*.md}"
 		echo $file
