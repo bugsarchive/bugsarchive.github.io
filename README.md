@@ -1,6 +1,7 @@
 [view site](https://bugs.lewoof.xyz)
 
 ## todo
+- [ ] come up with a name
 - [x] generate list of posts from [md](https://github.com/bugsarchive/md)
 - [x] render markdown to html
 - [ ] search box
