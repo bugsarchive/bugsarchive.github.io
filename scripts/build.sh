@@ -1,8 +1,8 @@
 #!/bin/bash
 
 start=$PWD
+git clone https://github.com/bugsarchive/md
 cd md
-git pull
 
 [ ! -d ../proc ] && mkdir ../proc
 [ ! -d ../build ] && mkdir ../build
