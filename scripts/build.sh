@@ -39,6 +39,7 @@ cd $start
 cat src/top.html > build/index.html
 cat proc/posts.html >> build/index.html
 cat src/btm.html >> build/index.html
+echo "bugs.lewoof.xyz" > build/CNAME
 
 yarn prettier -w build/*
 yarn prettier -w md/*
