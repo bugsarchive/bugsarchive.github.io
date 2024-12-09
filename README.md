@@ -3,6 +3,18 @@
 BugsArchive is a compendium of anything related to computer science or software engineering at all levels of abstractions.
 It's a pretty simple site but can be extremely useful for teaching things or revising your own knowledge.
 
+Before explaining the project structure, here are some rules for those looking to submit articles or code changes:
+
+## A few rules
+
+1. No JS unless absolutely necessary. We want this to be accessible by the simplest of browsers, including terminal ones.
+2. Anything created for this project must be FOSS.
+3. No shitposting in PRs, and no special characters, shell escape characters or RegEx syntax in directory or file names.
+4. No AI generated content nor plagiarised content. All content must be written by humans and be original; cite any sources however you want.
+
+> [!WARNING]
+> Violation of Rule 4 will cause you to no longer be able to contribute to the project whatsoever.
+
 ## Project Structure
 
 The project structure so far, which is not the final and can be changed after discussions regarding how it should be structured, is a bunch of HTML pages generated from a shell script.
@@ -29,13 +41,3 @@ The files in `/src/` are used in a particular way to generate the HTML pages tal
 ```
 
 Notice how none of the data has to be put together in the frontend, this is very important, we want the site to be accessible by the most simplest forms of browsers without any form of script support needed.
-
-## A few rules
-
-1. No JS unless absolutely necessary. As we stated earlier, we want this to be accessible by the simplest of browsers, including terminal ones.
-2. Anything created for this project must be FOSS.
-3. No shitposting in PRs, and no special characters, shell escape characters or RegEx syntax in directory or file names.
-4. No AI generated content nor plagiarised content. All content must be written by humans and be original; cite any sources however you want.
-
-> [!WARNING]
-> Violation of Rule 4 will cause you to no longer be able to contribute to the project whatsoever.
