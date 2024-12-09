@@ -7,10 +7,11 @@ Before explaining the project structure, here are some rules for those looking t
 
 ## A few rules
 
-1. No JS unless absolutely necessary. We want this to be accessible by the simplest of browsers, including terminal ones.
-2. Anything created for this project must be FOSS.
-3. No shitposting in PRs, and no special characters, shell escape characters or RegEx syntax in directory or file names.
-4. No AI generated content nor plagiarised content. All content must be written by humans and be original; cite any sources however you want.
+1. Follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) on your commit messages.
+2. No JS unless absolutely necessary. We want this to be accessible by the simplest of browsers, including terminal ones.
+3. Anything created for this project must be FOSS.
+4. No shitposting in PRs, and no special characters, shell escape characters or RegEx syntax in directory or file names.
+5. No AI generated content nor plagiarised content. All content must be written by humans and be original; cite any sources however you want.
 
 > [!WARNING]
 > Violation of Rule 4 will cause you to no longer be able to contribute to the project whatsoever.
