@@ -22,9 +22,11 @@ You can read the build script yourself [here](https://github.com/bugsarchive/bug
 
 The files in `/src/` are used in a particular way to generate the HTML pages talked about in the description of the build script's function:
 
-- /build/index.html = /src/top.html + (generated list) + /src/btm.html
-- /build/category001/index.html = /src/cattop.html + (rendered main.md + generated list) + /src/catbtm.html
-- /build/category001/article001.html = /src/posttop.html + (rendered markdown) + /src/postbtm.html
+```
+/build/index.html = /src/top.html + (generated list) + /src/btm.html
+/build/category001/index.html = /src/cattop.html + (rendered main.md + generated list) + /src/catbtm.html
+/build/category001/article001.html = /src/posttop.html + (rendered markdown) + /src/postbtm.html
+```
 
 Notice how none of the data has to be put together in the frontend, this is very important, we want the site to be accessible by the most simplest forms of browsers without any form of script support needed.
 
