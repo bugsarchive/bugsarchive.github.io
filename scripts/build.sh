@@ -1,11 +1,10 @@
 #!/bin/bash
 
 start=$PWD
-rm -rf md
+rm -rf md proc build || echo "Files already absent"
 git clone https://github.com/bugsarchive/md
 cd md
 rm LICENSE
-rm -r build
 
 [ ! -d ../proc ] && mkdir ../proc
 [ ! -d ../build ] && mkdir ../build
@@ -56,4 +55,4 @@ cat proc/posts.html >> build/index.html
 cat src/btm.html >> build/index.html
 echo "bugs.lewoof.xyz" > build/CNAME
 
-yarn prettier -w build/*
+yarn prettier -w build/*html
