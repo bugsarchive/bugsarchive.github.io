@@ -4,9 +4,9 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      serif: ["IBM Plex Serif", "ui-serif", "Georgia", "serif"],
-      mono: ["IBM Plex Mono", "ui-monospace", "SFMono-Regular"],
-      display: ["Modern Antiqua", "serif"],
+      serif: ["ui-serif", "Georgia", "serif"],
+      sans: ["Fira Sans", "sans"],
+      mono: ["Fira Mono", "ui-monospace", "SFMono-Regular"],
     },
   },
   plugins: [require("@tailwindcss/typography")],
