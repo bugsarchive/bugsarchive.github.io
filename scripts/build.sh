@@ -17,10 +17,16 @@ do
 
 	mkdir "$start/build/$category"
 	cat "$start/src/cattop.html" > "$start/build/$category/index.html"
-	echo "$catstart" >> "$start/build/$category/index.html"	
-	cat "$start/src/catbtm.html" >> "$start/build/$category/index.html"
 
 	cd "${dir##*/}"
+
+	if [ -e "main.md" ]; then
+		echo "main.md exists"
+		$start/node_modules/.bin/md2html "$PWD/main.md" >> "$start/build/$category/index.html"
+	fi
+
+	echo "<h2>Articles</h2>$catstart" >> "$start/build/$category/index.html"	
+	cat "$start/src/catbtm.html" >> "$start/build/$category/index.html"
 
 	for filepath in *md
 	do
@@ -32,7 +38,7 @@ do
 		echo "<li><a href='$category/${file##*/}.html'>${file##*/}</a></li>" >> ../../proc/posts.html
 		echo "<li><a href='$category/${file##*/}.html'>${file##*/}</a></li>" >> "$start/build/$category/index.html"
 		sed -i "s/Bugs Archive/$category/" "$start/build/$category/index.html"
-		sed -i "s/Articles/articles on $category/" "$start/build/$category/index.html"
+		sed -i "s/Browse Articles/$category/" "$start/build/$category/index.html"
 	done
 	echo "</ul>" >> "$start/build/$category/index.html"
 	echo "</ul>" >> ../../proc/posts.html
