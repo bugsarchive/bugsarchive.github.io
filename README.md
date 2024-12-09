@@ -14,7 +14,7 @@ Before explaining the project structure, here are some rules for those looking t
 5. No AI generated content nor plagiarised content. All content must be written by humans and be original; cite any sources however you want.
 
 > [!WARNING]
-> Violation of Rule 4 will cause you to no longer be able to contribute to the project whatsoever.
+> Violation of Rule 5 will cause you to no longer be able to contribute to the project whatsoever.
 
 ## Project Structure
 
