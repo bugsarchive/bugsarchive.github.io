@@ -3,6 +3,7 @@
 start=$PWD
 git clone https://github.com/bugsarchive/md
 cd md
+rm LICENSE
 
 [ ! -d ../proc ] && mkdir ../proc
 [ ! -d ../build ] && mkdir ../build
@@ -54,4 +55,3 @@ cat src/btm.html >> build/index.html
 echo "bugs.lewoof.xyz" > build/CNAME
 
 yarn prettier -w build/*
-yarn prettier -w md/*
