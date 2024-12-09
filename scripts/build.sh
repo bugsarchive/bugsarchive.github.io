@@ -23,6 +23,7 @@ do
 	if [ -e "main.md" ]; then
 		echo "main.md exists"
 		$start/node_modules/.bin/md2html "$PWD/main.md" >> "$start/build/$category/index.html"
+		rm main.md
 	fi
 
 	echo "<h2>Articles</h2>$catstart" >> "$start/build/$category/index.html"	
