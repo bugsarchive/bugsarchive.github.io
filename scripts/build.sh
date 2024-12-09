@@ -1,9 +1,11 @@
 #!/bin/bash
 
 start=$PWD
+rm -rf md
 git clone https://github.com/bugsarchive/md
 cd md
 rm LICENSE
+rm -r build
 
 [ ! -d ../proc ] && mkdir ../proc
 [ ! -d ../build ] && mkdir ../build
