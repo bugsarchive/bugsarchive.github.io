@@ -32,7 +32,10 @@ Notice how none of the data has to be put together in the frontend, this is very
 
 ## A few rules
 
-- No JS unless absolutely necessary. As we stated earlier, we want this to be accessible by the simplest of browsers, including terminal ones.
-- Anything created for this project must be FOSS.
-- No shitposting in PRs, and no special characters, shell escape characters or RegEx syntax in directory or file names.
-- No AI generated content nor plagiarised content. All content must be written by humans and be original; cite any sources however you want.
+1. No JS unless absolutely necessary. As we stated earlier, we want this to be accessible by the simplest of browsers, including terminal ones.
+2. Anything created for this project must be FOSS.
+3. No shitposting in PRs, and no special characters, shell escape characters or RegEx syntax in directory or file names.
+4. No AI generated content nor plagiarised content. All content must be written by humans and be original; cite any sources however you want.
+
+> [!WARNING]
+> Violation of Rule 4 will cause you to no longer be able to contribute to the project whatsoever.
