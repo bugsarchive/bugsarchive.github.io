@@ -11,25 +11,30 @@ for dir in */
 do
 	dir=${dir%*/}
 	category="${dir##*/}"
-	echo "${dir##*/}"
 
-	echo "<h3>$category</h3><ul class='grid grid-cols-1 text-wrap sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-x-12'>" >> ../proc/posts.html
+	catstart="<ul class='grid grid-cols-1 text-wrap sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-x-12'>" 
+	echo "<h3>$category</h3>$catstart" >> ../proc/posts.html
 
 	mkdir "$start/build/$category"
+	cat "$start/src/cattop.html" > "$start/build/$category/index.html"
+	echo "$catstart" >> "$start/build/$category/index.html"	
+	cat "$start/src/catbtm.html" >> "$start/build/$category/index.html"
 
 	cd "${dir##*/}"
 
 	for filepath in *md
 	do
 		file="${filepath%*.md}"
-		echo $file
-		echo "$PWD Running md2html $PWD/${filepath##*/}"
 		cat "$start/src/posttop.html" > "$start/build/$category/${file##*/}.html"
 		sed -i "s/Bugs Archive/${file##*/}/" "$start/build/$category/${file##*/}.html"
 		$start/node_modules/.bin/md2html "$PWD/${filepath##*/}" >> "$start/build/$category/${file##*/}.html"
 		cat "$start/src/postbtm.html" >> "$start/build/$category/${file##*/}.html"
 		echo "<li><a href='$category/${file##*/}.html'>${file##*/}</a></li>" >> ../../proc/posts.html
+		echo "<li><a href='$category/${file##*/}.html'>${file##*/}</a></li>" >> "$start/build/$category/index.html"
+		sed -i "s/Bugs Archive/$category/" "$start/build/$category/index.html"
+		sed -i "s/Articles/articles on $category/" "$start/build/$category/index.html"
 	done
+	echo "</ul>" >> "$start/build/$category/index.html"
 	echo "</ul>" >> ../../proc/posts.html
 	cd -
 done
