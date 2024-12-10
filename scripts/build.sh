@@ -32,10 +32,11 @@ do
 	# cd into the category so we can start rendering and linking the articles
 	cd "${dir##*/}"
 
-	# append rendered main.md to {category}/index.html and get rid of the file
+	# append rendered main.md to {category}/index.html, add a link to it in the main index.html and get rid of the file
 	if [ -e "main.md" ]; then
 		echo "main.md exists"
 		$start/node_modules/.bin/md2html "$PWD/main.md" >> "$start/build/$category/index.html"
+		echo "<li><a href='/$category/index.html'>$category homepage</a></li>" >> "$start/proc/posts.html"
 		rm main.md
 	fi
 
