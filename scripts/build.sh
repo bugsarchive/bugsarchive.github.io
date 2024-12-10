@@ -40,7 +40,7 @@ do
 	fi
 
 	# create a list of articles in {category}/index.html
-	echo "<h2>Articles</h2>$catstart" >> "$start/build/$category/index.html"	
+	echo "<hr /><h2>Articles</h2>$catstart" >> "$start/build/$category/index.html"	
 
 	# replace any text that says CATEGORY with the name of the category, and the Browse Articles heading with the category name
 	sed -i "s/CATEGORY/$category/" "$start/build/$category/index.html"
