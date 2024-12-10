@@ -81,6 +81,3 @@ cat src/btm.html >> build/index.html
 
 # serve CNAME file
 echo "bugs.lewoof.xyz" > build/CNAME
-
-# im cute
-yarn prettier -w build/*html
