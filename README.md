@@ -42,3 +42,6 @@ The files in `/src/` are used in a particular way to generate the HTML pages tal
 ```
 
 Notice how none of the data has to be put together in the frontend, this is very important, we want the site to be accessible by the most simplest forms of browsers without any form of script support needed.
+
+### Building the site
+Do `yarn && yarn build` to build the site to the `build` directory.
