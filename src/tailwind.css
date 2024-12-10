@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 body {
-  @apply prose prose-neutral !max-w-none md:!max-w-screen-sm lg:!max-w-screen-md xl:!max-w-screen-lg 2xl:!max-w-screen-xl !mx-auto font-sans;
+  @apply prose prose-neutral !max-w-none md:!max-w-screen-sm lg:!max-w-screen-md xl:!max-w-screen-lg 2xl:!max-w-screen-xl !mx-auto font-sans transition-all duration-500;
 }
 
 body:has(#dark:checked) {
