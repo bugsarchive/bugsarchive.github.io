@@ -34,7 +34,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Install md4c
-        run: sudo apt-get install -y libmd4c0 libmd4c0-dev
+        run: sudo apt-get install -y libmd4c0 libmd4c-dev
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
