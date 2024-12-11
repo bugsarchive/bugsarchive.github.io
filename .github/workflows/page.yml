@@ -34,7 +34,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Install md4c
-        run: wget http://archive.ubuntu.com/ubuntu/pool/universe/m/md4c/md2html_0.5.2-2_amd64.deb && sudo dpkg -i md2html_0.5.2-2_amd64.deb
+        run: sudo apt-get install -y libmd4c0 libmd4c-html0 libmd4c-html0-dev libmd4c-dev wget http://archive.ubuntu.com/ubuntu/pool/universe/m/md4c/md2html_0.5.2-2_amd64.deb && sudo dpkg -i md2html_0.5.2-2_amd64.deb
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
