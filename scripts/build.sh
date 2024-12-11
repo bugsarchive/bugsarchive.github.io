@@ -57,7 +57,7 @@ do
 		# replace the text POST with the article's name, this is for metadata
 		sed -i "s/POST/${file##*/}/" "$start/build/$category/${file##*/}.html"
 		# render the md as html and append to the {category}/{post}.html
-		$start/node_modules/.bin/md2html "$PWD/${filepath##*/}" >> "$start/build/$category/${file##*/}.html"
+		$start/scripts/bin/md2html "$PWD/${filepath##*/}" >> "$start/build/$category/${file##*/}.html"
 		# end {post}.html with the template's bottom part
 		cat "$start/src/postbtm.html" >> "$start/build/$category/${file##*/}.html"
 
