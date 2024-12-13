@@ -9,15 +9,19 @@ body {
 }
 
 header {
-  @apply prose prose-neutral !max-w-none w-full;
+  @apply prose prose-neutral !max-w-none w-full flex-col md:flex-row pb-4 md:pb-0;
+}
+
+header h1 {
+  @apply m-0;
 }
 
 article {
-  @apply prose prose-neutral !max-w-none flex-grow;
+  @apply prose prose-neutral md:!max-w-none flex-grow;
 }
 
 article.padded {
-  @apply md:!max-w-screen-sm lg:!max-w-screen-md xl:!max-w-screen-lg 2xl:!max-w-screen-xl !mx-auto;
+  @apply max-w-full md:!max-w-screen-sm lg:!max-w-screen-md xl:!max-w-screen-lg 2xl:!max-w-screen-xl !mx-auto;
 }
 
 a {
@@ -29,19 +33,19 @@ a {
 }
 
 body:has(#dark:checked) {
-  @apply bg-neutral-950 text-neutral-50 print:bg-white print:text-black;
+  @apply bg-neutral-900 text-neutral-50 print:bg-white print:text-black;
 }
 
 body:has(#dark:checked) .popup-content {
-  @apply bg-neutral-950 text-neutral-50 print:hidden;
+  @apply bg-neutral-900 text-neutral-50 print:hidden;
 }
 
 body:has(#dark:checked) header {
-  @apply prose-invert bg-neutral-950 text-neutral-50 print:hidden;
+  @apply prose-invert bg-neutral-900 text-neutral-50 print:hidden;
 }
 
 body:has(#dark:checked) article {
-  @apply prose-invert bg-neutral-950 text-neutral-50 print:bg-white print:text-black print:prose-neutral;
+  @apply prose-invert bg-neutral-900 text-neutral-50 print:bg-white print:text-black print:prose-neutral;
 }
 
 body:has(#serif:checked) {
