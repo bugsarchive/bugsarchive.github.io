@@ -1,16 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  @apply prose prose-neutral !max-w-none md:!max-w-screen-sm lg:!max-w-screen-md xl:!max-w-screen-lg 2xl:!max-w-screen-xl !mx-auto font-sans transition-all duration-500;
+  @apply font-sans;
+}
+
+article {
+  @apply prose prose-neutral !max-w-none md:!max-w-screen-sm lg:!max-w-screen-md xl:!max-w-screen-lg 2xl:!max-w-screen-xl !mx-auto;
+}
+
+a {
+  @apply underline;
+}
+
+.popup-content {
+  @apply bg-white;
 }
 
 body:has(#dark:checked) {
+  @apply bg-neutral-950 text-neutral-50 print:bg-white print:text-black;
+}
+
+body:has(#dark:checked) .popup-content {
+  @apply bg-neutral-950 text-neutral-50 print:hidden;
+}
+
+body:has(#dark:checked) header {
+  @apply prose-invert bg-neutral-950 text-neutral-50 print:hidden;
+}
+
+body:has(#dark:checked) article {
   @apply prose-invert bg-neutral-950 text-neutral-50 print:bg-white print:text-black print:prose-neutral;
 }
+
 body:has(#serif:checked) {
   @apply !font-serif;
 }
