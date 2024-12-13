@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 body {
-  @apply font-sans p-4 lg:p-8;
+  @apply font-sans p-4 lg:p-8 flex flex-col gap-4;
 }
 
 header {
@@ -13,7 +13,7 @@ header {
 }
 
 article {
-  @apply prose prose-neutral !max-w-none;
+  @apply prose prose-neutral !max-w-none flex-grow;
 }
 
 article.padded {
