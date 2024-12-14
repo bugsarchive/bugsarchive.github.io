@@ -35,7 +35,7 @@ do
 	# append rendered main.md to {category}/index.html, add a link to it in the main index.html and get rid of the file
 	if [ -e "main.md" ]; then
 		echo "main.md exists"
-		md2html "$PWD/main.md" >> "$start/build/$category/index.html"
+		pandoc "$PWD/main.md" >> "$start/build/$category/index.html"
 		echo "<li><a href='/$category/index.html'>$category homepage</a></li>" >> "$start/proc/posts.html"
 		rm main.md
 	fi
@@ -56,8 +56,19 @@ do
 		cat "$start/src/posttop.html" > "$start/build/$category/${file##*/}.html"
 		# replace the text POST with the article's name, this is for metadata
 		sed -i "s/POST/${file##*/}/" "$start/build/$category/${file##*/}.html"
-		# render the md as html and append to the {category}/{post}.html
-		md2html "$PWD/${filepath##*/}" >> "$start/build/$category/${file##*/}.html"
+
+		# render the md as html and append to {category}/{post}.html
+		pandoc "$PWD/${filepath##*/}" >> "$start/build/$category/${file##*/}.html"
+
+		# render the md as pdf with pandoc to {category}/{post}.pdf
+		pandoc "$PWD/${filepath##*/}" -s -o "$start/build/$category/${file##*/}.pdf"
+		
+		# render the md as latex with pandoc to {category}/{post}.latex
+		pandoc "$PWD/${filepath##*/}" -s -o "$start/build/$category/${file##*/}.tex"
+
+		# cp md to {category}/{post}.md
+		cp "$PWD/${filepath##*/}" "$start/build/$category/${file##*/}.md"
+
 		# end {post}.html with the template's bottom part
 		cat "$start/src/postbtm.html" >> "$start/build/$category/${file##*/}.html"
 
