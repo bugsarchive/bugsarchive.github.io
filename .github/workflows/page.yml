@@ -37,6 +37,8 @@ jobs:
         uses: pandoc/actions/setup@v1
         with:
           version: 2.19
+      - name: Install texlive
+        run: 'sudo apt-get install texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra'
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
