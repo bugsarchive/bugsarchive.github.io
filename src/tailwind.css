@@ -43,7 +43,7 @@ header h1 {
 }
 
 article {
-  @apply prose prose-neutral flex-grow lg:prose-p:text-justify !max-w-none lg:py-8;
+  @apply prose prose-neutral flex-grow !max-w-none lg:py-8;
 }
 
 footer {
@@ -86,6 +86,10 @@ lg:py-12 overflow-auto;
 
 .popup-content {
   @apply bg-white;
+}
+
+body:has(#justify:checked) article {
+  @apply lg:prose-p:text-justify;
 }
 
 @media (min-width: 1024px) {
