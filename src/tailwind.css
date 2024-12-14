@@ -29,11 +29,13 @@
 @tailwind utilities;
 
 body {
-  @apply font-sans p-4 lg:p-8 flex flex-col gap-4 selection:bg-neutral-950 selection:text-white text-justify;
+  @apply font-sans p-4 lg:p-8 lg:py-0 lg:m-0 flex flex-col gap-4
+  selection:bg-neutral-950 selection:text-white accent-stone-500;
 }
 
 header {
-  @apply prose prose-neutral !max-w-none w-full flex-col md:flex-row pb-4 md:pb-0;
+  @apply prose prose-neutral !max-w-none w-full flex-col md:flex-row
+pb-4 md:py-0;
 }
 
 header h1 {
@@ -41,11 +43,15 @@ header h1 {
 }
 
 article {
-  @apply prose prose-neutral flex-grow;
+  @apply prose prose-neutral flex-grow text-justify !max-w-none lg:py-8;
+}
+
+footer {
+  @apply lg:pb-8;
 }
 
 article.padded {
-  @apply !mx-auto;
+  @apply !mx-auto w-full !max-w-none lg:!max-w-prose lg:py-12;
 }
 
 a {
@@ -60,26 +66,86 @@ a {
   @apply font-math;
 }
 
+.toc-article {
+  @apply flex flex-col lg:flex-row gap-2 relative;
+}
+
+.desktop-only {
+  @apply hidden lg:visible;
+}
+
+.mobile-only {
+  @apply lg:hidden;
+}
+
+.toc {
+  @apply mx-auto w-full prose prose-neutral text-left lg:text-sm
+lg:max-w-48 lg:sticky left-0 top-0 lg:prose-sm lg:prose-h1:text-lg lg:mx-0
+lg:py-12 overflow-auto lg:prose-a:text-neutral-600;
+}
+
 .popup-content {
   @apply bg-white;
 }
 
-body:has(#dark:checked) {
-  @apply bg-neutral-900 text-neutral-50 print:bg-white print:text-black selection:bg-white selection:text-black;
+@media (min-width: 1024px) {
+  body:has(#dark-lg:checked) {
+    @apply bg-neutral-900 text-neutral-50 print:bg-white
+print:text-black selection:bg-white selection:text-black;
+  }
+
+  body:has(#dark-lg:checked) .popup-content {
+    @apply bg-neutral-900 text-neutral-50
+print:hidden;
+  }
+
+  body:has(#dark-lg:checked) header {
+    @apply prose-invert bg-neutral-900
+text-neutral-50 print:hidden;
+  }
+
+  body:has(#dark-lg:checked) article {
+    @apply prose-invert bg-neutral-900
+text-neutral-50 print:bg-white print:text-black print:prose-neutral;
+  }
+
+  body:has(#dark-lg:checked) .toc {
+    @apply prose-invert bg-neutral-900
+text-neutral-50 print:bg-white print:text-black print:prose-neutral prose-a:text-neutral-200;
+  }
+
+  body:has(#serif-lg:checked) {
+    @apply !font-serif;
+  }
 }
 
-body:has(#dark:checked) .popup-content {
-  @apply bg-neutral-900 text-neutral-50 print:hidden;
-}
+@media (max-width: 1024px) {
+  body:has(#dark:checked) {
+    @apply bg-neutral-900 text-neutral-50 print:bg-white
+print:text-black selection:bg-white selection:text-black;
+  }
 
-body:has(#dark:checked) header {
-  @apply prose-invert bg-neutral-900 text-neutral-50 print:hidden;
-}
+  body:has(#dark:checked) .popup-content {
+    @apply bg-neutral-900 text-neutral-50
+print:hidden;
+  }
 
-body:has(#dark:checked) article {
-  @apply prose-invert bg-neutral-900 text-neutral-50 print:bg-white print:text-black print:prose-neutral;
-}
+  body:has(#dark:checked) header {
+    @apply prose-invert bg-neutral-900
+text-neutral-50 print:hidden;
+  }
 
-body:has(#serif:checked) {
-  @apply !font-serif;
+  body:has(#dark:checked) article {
+    @apply prose-invert bg-neutral-900
+text-neutral-50 print:bg-white print:text-black print:prose-neutral;
+  }
+
+  body:has(#dark:checked) .toc {
+    @apply prose-invert bg-neutral-900
+text-neutral-50 print:bg-white print:text-black print:prose-neutral;
+  }
+
+  body:has(#serif:checked) {
+    @apply !font-serif;
+  }
 }
