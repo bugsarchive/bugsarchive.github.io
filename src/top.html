@@ -1,41 +1,60 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Articles about computers by people who like computers"
+    />
+    <meta name="author" content="BugsArchive" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://github.com/bugsarchive.png"
+    />
+    <title>Bugs Archive</title>
+    <link rel="stylesheet" href="tailwind.css" />
+    <link rel="stylesheet" href="nonarticle.css" />
+  </head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="description" content="Articles about computers by people who like computers" />
-	<meta name="author" content="BugsArchive" />
-	<link rel="icon" type="image/png" href="https://github.com/bugsarchive.png" />
-	<title>Bugs Archive</title>
-	<link rel="stylesheet" href="tailwind.css" />
-</head>
-
-<body class="min-h-screen">
-	<header class="flex gap-4 justify-between">
-		<h1>Browse Articles</h1>
-		<div class="flex gap-8">
-			<div class="flex gap-4">
-				<!--<a href="/">Home</a>-->
-				<a href="https://github.com/bugsarchive">Github</a>
-			</div>
-			<details class="relative">
-				<summary>Reading Options</summary>
-				<div class="absolute popup-content w-full z-10 left-0 p-4">
-					<div id="themeSelection">
-						<input type="checkbox" checked="checked" id="dark">
-						<label for="group">
-							<span>Dark Mode</span>
-						</label>
-					</div>
-					<div id="fontSelection">
-						<input type="checkbox" checked="checked" id="serif">
-						<label for="group">
-							<span>Serif Font</span>
-						</label>
-					</div>
-				</div>
-			</details>
-		</div>
-	</header>
-	<article>
+  <body class="min-h-screen p-4">
+    <header class="flex gap-4 justify-between">
+      <h1>Browse Articles</h1>
+      <div class="flex gap-8">
+        <div class="flex gap-4">
+          <!--<a href="/">Home</a>-->
+          <a href="https://github.com/bugsarchive">Github</a>
+        </div>
+        <details class="relative">
+          <summary>Reading Options</summary>
+          <div class="absolute popup-content w-full z-10 left-0 p-4">
+            <div class="lg:hidden" id="themeSelection">
+              <input type="checkbox" checked="checked" id="dark" />
+              <label for="group">
+                <span>Dark Mode</span>
+              </label>
+            </div>
+            <div class="lg:hidden" id="fontSelection">
+              <input type="checkbox" checked="checked" id="serif" />
+              <label for="group">
+                <span>Serif Font</span>
+              </label>
+            </div>
+            <div class="hidden lg:block" id="themeSelection">
+              <input type="checkbox" checked="checked" id="dark-lg" />
+              <label for="group">
+                <span>Dark Mode</span>
+              </label>
+            </div>
+            <div class="hidden lg:block" id="fontSelection">
+              <input type="checkbox" checked="checked" id="serif-lg" />
+              <label for="group">
+                <span>Serif Font</span>
+              </label>
+            </div>
+          </div>
+        </details>
+      </div>
+    </header>
+    <article>

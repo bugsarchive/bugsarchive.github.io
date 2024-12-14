@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    $for(author-meta)$
+    <meta name="author" content="$author-meta$" />
+    $endfor$ $if(date-meta)$
+    <meta name="date" content="$date-meta$" />
+    $endif$
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://github.com/bugsarchive.png"
+    />
+    <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
+    <link rel="stylesheet" href="../tailwind.css" />
+  </head>
+
+  <body class="min-h-screen">
+    <header class="mobile-only flex gap-4 justify-between mb-2">
+      <div></div>
+      <div class="flex gap-4">
+        <a href="/">Home</a>
+        <a href="POST.pdf">PDF</a>
+        <a href="POST.md">MD</a>
+        <a href="POST.tex">LaTeX</a>
+        <a href="https://github.com/bugsarchive">Github</a>
+        <details class="relative">
+          <summary>Reading Options</summary>
+          <div class="absolute popup-content w-full z-10 left-0 p-4">
+            <div id="themeSelection">
+              <input type="checkbox" checked="checked" id="dark" />
+              <label for="group">
+                <span>Dark Mode</span>
+              </label>
+            </div>
+            <div id="fontSelection">
+              <input type="checkbox" checked="checked" id="serif" />
+              <label for="group">
+                <span>Serif Font</span>
+              </label>
+            </div>
+          </div>
+        </details>
+      </div>
+    </header>
+    <div class="toc-article">
+      <div id="toc" class="toc lg:h-screen flex flex-col justify-between">
+        <div>
+          <h1>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</h1>
+          $toc$
+        </div>
+        <div class="desktop-only flex gap-4 print:hidden lg:flex">
+          <a
+            href="https://raw.githubusercontent.com/bugsarchive/md/refs/heads/main/LICENSE"
+            >GNU FDL</a
+          >
+          <a
+            href="https://raw.githubusercontent.com/bugsarchive/site/refs/heads/main/LICENSE"
+            >MIT</a
+          >
+        </div>
+      </div>
+      <article class="padded">
+        <h1 class="desktop-only lg:block">
+          $if(title-prefix)$$title-prefix$ - $endif$$pagetitle$
+        </h1>
+        $body$
+      </article>
+      <div
+        class="desktop-only max-w-48 gap-4 h-screen py-12 lg:sticky right-0 top-0 lg:flex flex-col justify-between text-right"
+      >
+        <div class="flex flex-col gap-2">
+          <a href="/">Home</a>
+          <a href="POST.pdf">PDF</a>
+          <a href="POST.md">MD</a>
+          <a href="POST.tex">LaTeX</a>
+          <a href="https://github.com/bugsarchive">Github</a>
+        </div>
+        <div>
+          <div id="themeSelection">
+            <label for="group">
+              <span>Dark Mode</span>
+            </label>
+            <input type="checkbox" checked="checked" id="dark-lg" />
+          </div>
+          <div id="fontSelection">
+            <label for="group">
+              <span>Serif Font</span>
+            </label>
+            <input type="checkbox" checked="checked" id="serif-lg" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="mobile-only flex gap-4 print:hidden">
+      <a
+        href="https://raw.githubusercontent.com/bugsarchive/md/refs/heads/main/LICENSE"
+        >GNU FDL</a
+      >
+      <a
+        href="https://raw.githubusercontent.com/bugsarchive/site/refs/heads/main/LICENSE"
+        >MIT</a
+      >
+    </footer>
+  </body>
+</html>
