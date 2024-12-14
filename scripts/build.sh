@@ -1,7 +1,7 @@
 #!/bin/bash
 
 start=$PWD
-rm -rf md proc build || echo "Files already absent"
+rm -rf proc build || echo "Files already absent"
 
 # clone the md repo so we have the articles
 git clone https://github.com/bugsarchive/md
