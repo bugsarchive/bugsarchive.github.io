@@ -43,7 +43,7 @@ header h1 {
 }
 
 article {
-  @apply prose prose-neutral flex-grow text-justify !max-w-none lg:py-8;
+  @apply prose prose-neutral flex-grow lg:prose-p:text-justify !max-w-none lg:py-8;
 }
 
 footer {
