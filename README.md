@@ -38,7 +38,9 @@ The files in `/src/` are used in a particular way to generate the HTML pages tal
 ```
 /build/index.html = /src/top.html + (generated list) + /src/btm.html
 /build/category001/index.html = /src/cattop.html + (rendered main.md + generated list) + /src/catbtm.html
-/build/category001/article001.html = /src/posttop.html + (rendered markdown) + /src/postbtm.html
+/build/category001/article001.html = pandoc ... --template /src/pandoctemplate.html
+/build/tailwind.css = tailwind /src/tailwind.css
+# NOT USED ANYMORE BUT HERE IT IS ANYWAY: /build/category001/article001.html = /src/posttop.html + (rendered markdown) + /src/postbtm.html
 ```
 
 Notice how none of the data has to be put together in the frontend, this is very important, we want the site to be accessible by the most simplest forms of browsers without any form of script support needed.
