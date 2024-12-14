@@ -29,7 +29,7 @@
 @tailwind utilities;
 
 body {
-  @apply font-sans p-4 lg:p-8 flex flex-col gap-4 selection:bg-neutral-950 selection:text-white;
+  @apply font-sans p-4 lg:p-8 flex flex-col gap-4 selection:bg-neutral-950 selection:text-white text-justify;
 }
 
 header {
@@ -41,11 +41,11 @@ header h1 {
 }
 
 article {
-  @apply prose prose-neutral md:!max-w-none flex-grow;
+  @apply prose prose-neutral flex-grow;
 }
 
 article.padded {
-  @apply max-w-full md:!max-w-screen-sm lg:!max-w-screen-md xl:!max-w-screen-lg 2xl:!max-w-screen-xl !mx-auto;
+  @apply !mx-auto;
 }
 
 a {
