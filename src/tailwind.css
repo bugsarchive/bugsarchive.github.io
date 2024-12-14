@@ -51,7 +51,7 @@ footer {
 }
 
 article.padded {
-  @apply !mx-auto w-full !max-w-none lg:!max-w-prose lg:py-12;
+  @apply !mx-auto w-full !max-w-none sm:!max-w-prose lg:py-12;
 }
 
 a {
