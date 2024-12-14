@@ -59,7 +59,7 @@ do
 		pandoc "$PWD/${filepath##*/}" --toc -s -o "$start/build/$category/${file##*/}.html" --template $start/src/pandoctemplate.html
 
 		# replace the text POST with the article's name, this is for links
-		sed -i "s/href=\"POST\.\((pdf)|(md)|(tex)\)/href=\"${file##*/}.\1/" "$start/build/$category/${file##*/}.html"
+		sed -i "s/href=\"POST/href=\"${file##*/}/" "$start/build/$category/${file##*/}.html"
 
 		# render the md as pdf with pandoc to {category}/{post}.pdf
 		pandoc "$PWD/${filepath##*/}" -s -o "$start/build/$category/${file##*/}.pdf"

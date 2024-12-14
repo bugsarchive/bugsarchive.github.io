@@ -81,7 +81,7 @@ a {
 .toc {
   @apply mx-auto w-full prose prose-neutral text-left lg:text-sm
 lg:max-w-48 lg:sticky left-0 top-0 lg:prose-sm lg:prose-h1:text-lg lg:mx-0
-lg:py-12 overflow-auto lg:prose-a:text-neutral-600;
+lg:py-12 overflow-auto;
 }
 
 .popup-content {
@@ -111,7 +111,7 @@ text-neutral-50 print:bg-white print:text-black print:prose-neutral;
 
   body:has(#dark-lg:checked) .toc {
     @apply prose-invert bg-neutral-900
-text-neutral-50 print:bg-white print:text-black print:prose-neutral prose-a:text-neutral-200;
+text-neutral-50 print:bg-white print:text-black print:prose-neutral;
   }
 
   body:has(#serif-lg:checked) {
