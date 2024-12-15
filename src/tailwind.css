@@ -28,6 +28,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply scroll-smooth;
+}
+
 body {
   @apply font-sans p-4 lg:p-8 lg:py-0 lg:m-0 flex flex-col gap-4
   selection:bg-neutral-950 selection:text-white accent-stone-500;
