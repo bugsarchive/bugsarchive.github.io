@@ -34,7 +34,7 @@ html {
 
 body {
   @apply bg-chamois-100 font-sans p-4 lg:p-8 lg:py-0 lg:m-0 flex flex-col
-gap-4 selection:bg-mine-shaft-950 selection:text-white accent-stone-500;
+gap-4 selection:bg-mine-shaft-950 selection:text-white accent-accent;
 }
 
 header {
