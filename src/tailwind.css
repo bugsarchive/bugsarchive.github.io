@@ -33,12 +33,12 @@ html {
 }
 
 body {
-  @apply font-sans p-4 lg:p-8 lg:py-0 lg:m-0 flex flex-col gap-4
-  selection:bg-neutral-950 selection:text-white accent-stone-500;
+  @apply bg-chamois-100 font-sans p-4 lg:p-8 lg:py-0 lg:m-0 flex flex-col
+gap-4 selection:bg-mine-shaft-950 selection:text-white accent-stone-500;
 }
 
 header {
-  @apply prose prose-neutral !max-w-none w-full flex-col md:flex-row
+  @apply prose prose-archive !max-w-none w-full flex-col md:flex-row
 pb-4 md:py-0;
 }
 
@@ -47,7 +47,7 @@ header h1 {
 }
 
 article {
-  @apply prose prose-neutral flex-grow !max-w-none lg:py-8;
+  @apply prose prose-archive flex-grow !max-w-none lg:py-8;
 }
 
 footer {
@@ -83,13 +83,13 @@ a {
 }
 
 .toc {
-  @apply mx-auto w-full prose prose-neutral text-left lg:text-sm
+  @apply mx-auto w-full prose prose-archive text-left lg:text-sm
 lg:max-w-48 lg:sticky left-0 top-0 lg:prose-sm lg:prose-h1:text-lg lg:mx-0
 lg:py-12 overflow-auto;
 }
 
 .popup-content {
-  @apply bg-white;
+  @apply bg-chamois-100;
 }
 
 body:has(#justify:checked) article {
@@ -98,28 +98,28 @@ body:has(#justify:checked) article {
 
 @media (min-width: 1024px) {
   body:has(#dark-lg:checked) {
-    @apply bg-neutral-900 text-neutral-50 print:bg-white
-print:text-black selection:bg-white selection:text-black;
+    @apply bg-mine-shaft-950 text-chamois-100 print:bg-white print:text-black
+selection:bg-white selection:text-black;
   }
 
   body:has(#dark-lg:checked) .popup-content {
-    @apply bg-neutral-900 text-neutral-50
-print:hidden;
+    @apply bg-mine-shaft-950
+text-chamois-100 print:hidden;
   }
 
   body:has(#dark-lg:checked) header {
-    @apply prose-invert bg-neutral-900
-text-neutral-50 print:hidden;
+    @apply prose-invert bg-mine-shaft-950
+text-chamois-100 print:hidden;
   }
 
   body:has(#dark-lg:checked) article {
-    @apply prose-invert bg-neutral-900
-text-neutral-50 print:bg-white print:text-black print:prose-neutral;
+    @apply prose-invert bg-mine-shaft-950
+text-chamois-100 print:bg-white print:text-black print:prose-neutral;
   }
 
   body:has(#dark-lg:checked) .toc {
-    @apply prose-invert bg-neutral-900
-text-neutral-50 print:bg-white print:text-black print:prose-neutral;
+    @apply prose-invert bg-mine-shaft-950
+text-chamois-100 print:bg-white print:text-black print:prose-neutral;
   }
 
   body:has(#serif-lg:checked) {
@@ -129,28 +129,28 @@ text-neutral-50 print:bg-white print:text-black print:prose-neutral;
 
 @media (max-width: 1024px) {
   body:has(#dark:checked) {
-    @apply bg-neutral-900 text-neutral-50 print:bg-white
-print:text-black selection:bg-white selection:text-black;
+    @apply bg-mine-shaft-950 text-chamois-100 print:bg-white print:text-black
+  selection:bg-white selection:text-black;
   }
 
   body:has(#dark:checked) .popup-content {
-    @apply bg-neutral-900 text-neutral-50
-print:hidden;
+    @apply bg-mine-shaft-950
+  text-chamois-100 print:hidden;
   }
 
   body:has(#dark:checked) header {
-    @apply prose-invert bg-neutral-900
-text-neutral-50 print:hidden;
+    @apply prose-invert bg-mine-shaft-950
+  text-chamois-100 print:hidden;
   }
 
   body:has(#dark:checked) article {
-    @apply prose-invert bg-neutral-900
-text-neutral-50 print:bg-white print:text-black print:prose-neutral;
+    @apply prose-invert bg-mine-shaft-950
+  text-chamois-100 print:bg-white print:text-black print:prose-neutral;
   }
 
   body:has(#dark:checked) .toc {
-    @apply prose-invert bg-neutral-900
-text-neutral-50 print:bg-white print:text-black print:prose-neutral;
+    @apply prose-invert bg-mine-shaft-950
+  text-chamois-100 print:bg-white print:text-black print:prose-neutral;
   }
 
   body:has(#serif:checked) {
