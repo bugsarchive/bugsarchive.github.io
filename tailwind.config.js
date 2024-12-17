@@ -30,6 +30,7 @@ module.exports = {
           900: "#3d3d3d",
           950: "#282828",
         },
+        accent: "#98971a",
       },
       typography: ({ theme }) => ({
         archive: {
