@@ -85,9 +85,7 @@ done
 cd $start
 
 # create our homepage index.html by combining top.html, proc/posts.html and btm.html
-cat src/top.html > build/index.html
-cat proc/posts.html >> build/index.html
-cat src/btm.html >> build/index.html
+cat src/top.html proc/posts.html src/btm.html > build/index.html
 
 # serve CNAME file
 echo "bugs.lewoof.xyz" > build/CNAME
