@@ -4,7 +4,7 @@ start=$PWD
 rm -rf md proc build || echo "Files already absent"
 
 # clone the md repo so we have the articles
-git clone https://github.com/bugsarchive/md
+git clone --depth=1 https://github.com/bugsarchive/md
 cd md
 
 # remove license as its not necessary for rendering our files
